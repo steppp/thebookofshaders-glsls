@@ -41,12 +41,8 @@ float sincCurve(float x, float k) {
 void main() {
     vec2 st = gl_FragCoord.xy / u_resolution;
 
-    // y = 0 if st.x < 0.5, 1 otherwise
-    // float y = step(0.5, st.x);
-    // smooth interpolation between 0.1 and 0.9
-    // note that this collapses to step when min = max
-    // float y = smoothstep(.1, .9, st.x);
-    float y = sincCurve(st.x, 20.);
+    float x = st.x - .5;
+    float y = pow(cos(PI * x), 3.5);
     vec3 color = vec3(y);
 
     float pct = plot(st, y);
