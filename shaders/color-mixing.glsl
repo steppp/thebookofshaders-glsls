@@ -23,7 +23,7 @@ void main() {
     pct.g = sin(st.x * PI);
     pct.b = pow(st.x * (sin(u_time) / 2.0 + 0.500000001), 0.5);
 
-    // not that the colors could seem fake since colorA and colorB are not black/white
+    // note that the colors could seem fake since colorA and colorB are not black/white
     color = mix(colorA, colorB, pct);
 
     // plot transition lines for each channel
