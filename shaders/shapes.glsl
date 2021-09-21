@@ -21,7 +21,7 @@ void main() {
     vec2 tr = smoothstep(vec2(0.1, 0.03), vec2(0.12, 0.05), 1.0 - st);
 
     float boxColor = 
-        // (cos(u_time) + 1.0) * 0.5;
+        // (cos(u_time / 2.0) + 1.0) * 0.5;
         1.0;
 
     // color = vec3(bl.x * bl.y * tr.x * tr.y);    // equivalent to left && bottom && right && top
